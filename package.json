@@ -1,5 +1,5 @@
 {
-  "name": "next-pg",
+  "name": "next-neon",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,10 +13,13 @@
     "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-date=2023-12-06 --compatibility-flag=nodejs_compat"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^0.6.1",
+    "@prisma/adapter-neon": "^5.8.0-dev.32",
+    "@prisma/client": "^5.8.0-dev.32",
     "next": "14.0.4",
+    "prisma": "^5.8.0-dev.32",
     "react": "^18",
-    "react-dom": "^18",
-    "pg": "^8.11.3"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.8.2",
