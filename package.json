@@ -1,5 +1,5 @@
 {
-  "name": "next-neon",
+  "name": "next-planetscale",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,8 +13,8 @@
     "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-date=2023-12-06 --compatibility-flag=nodejs_compat"
   },
   "dependencies": {
-    "@neondatabase/serverless": "^0.6.1",
-    "@prisma/adapter-neon": "^5.8.0-dev.32",
+    "@planetscale/database": "^1.13.0",
+    "@prisma/adapter-planetscale": "^5.8.0-dev.32",
     "@prisma/client": "^5.8.0-dev.32",
     "next": "14.0.4",
     "prisma": "^5.8.0-dev.32",
