@@ -1,16 +1,11 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client/edge'
-import { PrismaNeon } from '@prisma/adapter-neon'
 import { Pool } from '@neondatabase/serverless'
 
 export const runtime = 'edge';
 
 export async function GET(request) {
   const client = new Pool({ connectionString: process.env.DATABASE_URL })
-  const adapter = new PrismaNeon(client)
-  const prisma = new PrismaClient({ adapter })
+  const result = await client.query('SELECT * FROM User')
 
-  const users = await prisma.user.findMany()
-
-  return NextResponse.json(users, { status: 200 })
+  return NextResponse.json(result, { status: 200 })
 }
